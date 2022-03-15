@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
           {mockData.map(function(item, index) {
             return (
-              <SongCard title={item.title} />
+              <SongCard title={item.title} artist={undefined} onChangeToggle={undefined} />
             )})}
 
         </div>
