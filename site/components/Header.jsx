@@ -10,9 +10,9 @@ export default function Header() {
             <Link href="/">
               <a>
                 <span className="sr-only">Hermit</span>
-                <img
+                <Image
                   className="h-10 w-auto"
-                  src="/logo_colored.svg"
+                  src="/logo.png"
                   alt="Logo"
                   width={134}
                   height={66}

@@ -8,7 +8,7 @@ export default function Footer() {
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
           <Link className='cursor-pointer' href="/">
             <a>
-              <Image src="/logo_white.svg" alt="Logo" width="100" height="100" />
+              <Image src="/logo_white.png" alt="Logo" width="134" height="65" />
             </a>
           </Link>
         </nav>
