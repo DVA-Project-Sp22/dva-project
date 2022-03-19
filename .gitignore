@@ -37,3 +37,10 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# project data set
+eda/data/*
+*.db
+
+*.iml
+*.xml
