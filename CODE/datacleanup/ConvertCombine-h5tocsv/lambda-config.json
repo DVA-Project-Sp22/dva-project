@@ -1,0 +1,38 @@
+{
+    "FunctionName": "ConvertCombine-h5tocsv",
+    "FunctionArn": "arn:aws:lambda:us-east-1:987987637308:function:ConvertCombine-h5tocsv",
+    "Runtime": "python3.9",
+    "Role": "arn:aws:iam::987987637308:role/lambda-sqs-s3",
+    "Handler": "lambda_function.lambda_handler",
+    "CodeSize": 1105,
+    "Description": "",
+    "Timeout": 900,
+    "MemorySize": 256,
+    "LastModified": "2022-03-20T04:57:39.000+0000",
+    "CodeSha256": "+CB4AmPbERbqvr5Bj6CkxH4Iyqm7Rzd9BuSQ1Js8tDw=",
+    "Version": "$LATEST",
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "6ec1fee9-98e5-4337-93a6-f94235db322d",
+    "Layers": [
+        {
+            "Arn": "arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p39-numpy:2",
+            "CodeSize": 19539639
+        },
+        {
+            "Arn": "arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p39-pandas:2",
+            "CodeSize": 38241514
+        },
+        {
+            "Arn": "arn:aws:lambda:us-east-1:987987637308:layer:h5py360:2",
+            "CodeSize": 4339123
+        }
+    ],
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+        "x86_64"
+    ]
+}
