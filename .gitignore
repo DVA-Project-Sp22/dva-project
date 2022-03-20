@@ -37,5 +37,13 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-CODE/datacleanup/tmp/
-.vscode/launch.json
+
+# VS Code
+.vscode/
+
+# project data set
+eda/data/*
+*.db
+
+*.iml
+*.xml
