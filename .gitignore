@@ -38,6 +38,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
+# VS Code
+.vscode/
+
 # project data set
 eda/data/*
 *.db
