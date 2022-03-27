@@ -8,9 +8,21 @@ import SongCard from '../components/SongCard';
 const Home: NextPage = () => {
 
   const mockData = new Array<any>(6).fill({ title: 'test'});
+  const generateTestPlaylist = async (event: any) => {
+    event.preventDefault();
+
+    // post to the api
+    const response = await fetch('/api/add-to-playlist', {
+      method: 'POST',
+    });
+    if (response) {
+      console.log(response);
+      alert('items added to playlist');
+    }
+  };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center min-h-screen">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -18,9 +30,9 @@ const Home: NextPage = () => {
 
       <Header />
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+      <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
 
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
+        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
           {mockData.map(function(item, index) {
             return (
               <SongCard title={item.title} artist={undefined} onChangeToggle={undefined} />
@@ -29,9 +41,10 @@ const Home: NextPage = () => {
         </div>
         <button
           type="button"
-          className="mt-4 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="inline-flex items-center px-6 py-3 mt-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          onClick={generateTestPlaylist}
         >
-          Generate Playlist
+          Generate Test Playlist
         </button>
       </main>
 
