@@ -42,7 +42,7 @@ export default function SongCard({
             <motion.path
                 d="M38 74.707l24.647 24.646L116.5 45.5"
                 fill="transparent"
-                strokeWidth="20"
+                strokeWidth="15"
                 stroke="#8B5CF6"
                 strokeLinecap="round"
                 initial={{ pathLength: 0.9, opacity: 1 }}

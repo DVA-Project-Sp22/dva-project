@@ -28,9 +28,6 @@ export default function Header() {
             <a href={"/faq"} className="text-base font-medium text-white hover:text-indigo-50">
               FAQ
             </a>
-            <a href={"/terms"} className="text-base font-medium text-white hover:text-indigo-50">
-              Terms & Conditions
-            </a>
           </div>
         </div>
       </nav>
