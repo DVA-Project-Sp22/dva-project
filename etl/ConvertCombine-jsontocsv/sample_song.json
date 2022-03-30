@@ -1,0 +1,315 @@
+{
+    "response": {
+        "status": {
+            "version": "4.2",
+            "code": 0,
+            "message": "Success"
+        },
+        "songs": [
+            {
+                "artist_foreign_ids": [
+                    {
+                        "foreign_id": "facebook:artist:105594389473814",
+                        "catalog": "facebook"
+                    },
+                    {
+                        "foreign_id": "musicbrainz:artist:04271c28-b9a7-4724-b7fd-022409fbce60",
+                        "catalog": "musicbrainz"
+                    },
+                    {
+                        "foreign_id": "openaura:artist:52992259e4b0bd2cefd6366b",
+                        "catalog": "openaura"
+                    },
+                    {
+                        "foreign_id": "songkick:artist:132662",
+                        "catalog": "songkick"
+                    },
+                    {
+                        "foreign_id": "eventful:artist:P0-001-000090659-0",
+                        "catalog": "eventful"
+                    },
+                    {
+                        "foreign_id": "discogs:artist:30721",
+                        "catalog": "discogs"
+                    },
+                    {
+                        "foreign_id": "7digital-US:artist:4358",
+                        "catalog": "7digital-US"
+                    },
+                    {
+                        "foreign_id": "songmeanings:artist:137439000449",
+                        "catalog": "songmeanings"
+                    },
+                    {
+                        "foreign_id": "7digital-UK:artist:4358",
+                        "catalog": "7digital-UK"
+                    },
+                    {
+                        "foreign_id": "whosampled:artist:4789",
+                        "catalog": "whosampled"
+                    },
+                    {
+                        "foreign_id": "seatgeek:artist:242733",
+                        "catalog": "seatgeek"
+                    },
+                    {
+                        "foreign_id": "jambase:artist:30778",
+                        "catalog": "jambase"
+                    },
+                    {
+                        "foreign_id": "lyricfind-US:artist:f2f4d13f20bab8830feac11470dc6f3d",
+                        "catalog": "lyricfind-US"
+                    },
+                    {
+                        "foreign_id": "7digital-AU:artist:4358",
+                        "catalog": "7digital-AU"
+                    },
+                    {
+                        "foreign_id": "musixmatch-WW:artist:11315",
+                        "catalog": "musixmatch-WW"
+                    },
+                    {
+                        "foreign_id": "spotify:artist:6ycoXr0Ayd89vFUT6BOiWo",
+                        "catalog": "spotify"
+                    }
+                ],
+                "id": "SOAAABI12A8C13615F",
+                "title": "Afro Jazziac",
+                "artist_name": "Herbie Mann",
+                "foreign_ids": [],
+                "tracks": [
+                    {
+                        "album_name": "To Birdland and Hurry",
+                        "foreign_id": "spotify:track:6i9aLGfG1Id1oCcpgmRjmE",
+                        "catalog": "spotify",
+                        "id": "TRYGAFK144D1B85B1A",
+                        "album_type": "unknown",
+                        "album_date": "2001",
+                        "foreign_release_id": "spotify:album:36Q9oun5lrfNsurfDL3tH4"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/012/911/0001291184_200.jpg",
+                        "catalog": "7digital-UK",
+                        "id": "TRFNTBE13125561A16",
+                        "preview_url": "http://previews.7digital.com/clip/14254523",
+                        "foreign_id": "7digital-UK:track:14254523",
+                        "foreign_release_id": "7digital-UK:release:1291184"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/015/304/0001530483_200.jpg",
+                        "catalog": "7digital-UK",
+                        "id": "TROPFTJ135C7AED2C6",
+                        "preview_url": "http://previews.7digital.com/clip/16875417",
+                        "foreign_id": "7digital-UK:track:16875417",
+                        "foreign_release_id": "7digital-UK:release:1530483"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/032/569/0003256930_200.jpg",
+                        "catalog": "7digital-UK",
+                        "id": "TRSINHJ14567EC3A7F",
+                        "preview_url": "http://previews.7digital.com/clip/34542996",
+                        "foreign_id": "7digital-UK:track:34542996",
+                        "foreign_release_id": "7digital-UK:release:3256930"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/031/381/0003138179_200.jpg",
+                        "catalog": "7digital-UK",
+                        "id": "TRJTQCC14311E58142",
+                        "preview_url": "http://previews.7digital.com/clip/33391793",
+                        "foreign_id": "7digital-UK:track:33391793",
+                        "foreign_release_id": "7digital-UK:release:3138179"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/033/507/0003350778_200.jpg",
+                        "catalog": "7digital-UK",
+                        "id": "TRODDNG14567F302F1",
+                        "preview_url": "http://previews.7digital.com/clip/35390535",
+                        "foreign_id": "7digital-UK:track:35390535",
+                        "foreign_release_id": "7digital-UK:release:3350778"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/033/507/0003350785_200.jpg",
+                        "catalog": "7digital-UK",
+                        "id": "TRJACXY14567F30C42",
+                        "preview_url": "http://previews.7digital.com/clip/35391242",
+                        "foreign_id": "7digital-UK:track:35391242",
+                        "foreign_release_id": "7digital-UK:release:3350785"
+                    },
+                    {
+                        "foreign_id": "spotify:track:0iLBwCJJeUuRGqEoQq9yXS",
+                        "foreign_release_id": "spotify:album:2SlSQp21jeEHs9bEweRmHB",
+                        "catalog": "spotify",
+                        "id": "TRUTNIF144D0ADDEE9"
+                    },
+                    {
+                        "foreign_id": "spotify:track:2SibrhM7fwra8T7YiIy4ZH",
+                        "foreign_release_id": "spotify:album:1q4mc9dlDBZDHhmTf0b6tz",
+                        "catalog": "spotify",
+                        "id": "TRDRDWX144D0F528F9"
+                    },
+                    {
+                        "foreign_id": "spotify:track:2vvjLh1AzoixALU7rQ0oUY",
+                        "foreign_release_id": "spotify:album:2G3hlb6Vy8Jm3gCoiXaGDg",
+                        "catalog": "spotify",
+                        "id": "TRTXYUX144D10C5DDA"
+                    },
+                    {
+                        "foreign_id": "spotify:track:3VEU8AKAystN7mz92KgzSN",
+                        "foreign_release_id": "spotify:album:0uP2nRMv1kaOGWwSoHTRyz",
+                        "catalog": "spotify",
+                        "id": "TRREDPF144D125A940"
+                    },
+                    {
+                        "foreign_id": "spotify:track:0kdeXRZX4Dn6kiTqoJjGSA",
+                        "foreign_release_id": "spotify:album:2kfBwc4KfTt1AHqi1EUXrQ",
+                        "catalog": "spotify",
+                        "id": "TRIREVA144D0AF8480"
+                    },
+                    {
+                        "foreign_id": "spotify:track:1LBg9g0FRWVkwhkn4wHG8s",
+                        "foreign_release_id": "spotify:album:3slu2oEmZakLvXnfxyrqKb",
+                        "catalog": "spotify",
+                        "id": "TRJVGFQ144D0C7F37B"
+                    },
+                    {
+                        "foreign_id": "spotify:track:2AMmKvxNZ7s5V6MDgGdJ2E",
+                        "foreign_release_id": "spotify:album:5li0szBVPmvrz4elClFfCs",
+                        "catalog": "spotify",
+                        "id": "TRVHLZG144D0EB41FB"
+                    },
+                    {
+                        "foreign_id": "spotify:track:2rPc1FGMgzSpm7buUY1SL9",
+                        "foreign_release_id": "spotify:album:7FpV8EFbkX4cC3jh6WFd0v",
+                        "catalog": "spotify",
+                        "id": "TRZWCJF144D10A369C"
+                    },
+                    {
+                        "foreign_id": "spotify:track:3N8DIobVZbAhjszVSQhUca",
+                        "foreign_release_id": "spotify:album:3LTR4sr0JsNvhWMjzs3yW3",
+                        "catalog": "spotify",
+                        "id": "TRSUMUV144D1209FB3"
+                    },
+                    {
+                        "foreign_id": "spotify:track:4tu8Tanfx3RDDDj1BCcMkq",
+                        "foreign_release_id": "spotify:album:4FLsXLBB4xxK2rWChii3NU",
+                        "catalog": "spotify",
+                        "id": "TRKVKSR144D15EFAAA"
+                    },
+                    {
+                        "foreign_id": "spotify:track:6Z089TzMUszVPVVgfggLnm",
+                        "foreign_release_id": "spotify:album:3mpXoGHTEf4gE9HW45tWbm",
+                        "catalog": "spotify",
+                        "id": "TRWIVVB144D1B0DDF7"
+                    },
+                    {
+                        "foreign_id": "spotify:track:2AK0A4QQgRlAhCkPch8cim",
+                        "foreign_release_id": "spotify:album:6gTG3iHyzm08bUEg9RMS5W",
+                        "catalog": "spotify",
+                        "id": "TRAFICR144D0EB31BE"
+                    },
+                    {
+                        "foreign_id": "spotify:track:6D4tITA4ZG9QdQW9cU00uD",
+                        "foreign_release_id": "spotify:album:6vJsVVQ6Y3dtyD94EIGneo",
+                        "catalog": "spotify",
+                        "id": "TRDDPGD144D1A0B85F"
+                    },
+                    {
+                        "foreign_id": "spotify:track:6z08mCfqUhiC89bDTXfhne",
+                        "foreign_release_id": "spotify:album:0FLpBtIW3grNXsEUjLifk8",
+                        "catalog": "spotify",
+                        "id": "TROPGXZ144D1C694F3"
+                    },
+                    {
+                        "foreign_id": "spotify:track:7sbRRG4W3kUDqQbbEOotGE",
+                        "foreign_release_id": "spotify:album:5qjOSsl3gsJPtFn3lI2Qf3",
+                        "catalog": "spotify",
+                        "id": "TRMFMNZ144D1E37564"
+                    },
+                    {
+                        "foreign_id": "spotify:track:0mbci4GUveJaRUjjM832Ws",
+                        "foreign_release_id": "spotify:album:5UmHukHIxBcH3lFMU2YoOo",
+                        "catalog": "spotify",
+                        "id": "TRQVUDW147888F8F88"
+                    },
+                    {
+                        "foreign_id": "spotify:track:62jJwTsCwxNyWZic4M4DfS",
+                        "foreign_release_id": "spotify:album:5LGCZHPov5MucWFellz03F",
+                        "catalog": "spotify",
+                        "id": "TRTSNTC149242B37CF"
+                    },
+                    {
+                        "foreign_id": "spotify:track:6qZSMpoFSUoAQ2GaNtEEwO",
+                        "foreign_release_id": "spotify:album:0n38T3fXiQHtAQYGMomUhV",
+                        "catalog": "spotify",
+                        "id": "TRTZPUE14EDF0CF574"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/012/911/0001291184_200.jpg",
+                        "catalog": "7digital-AU",
+                        "id": "TRFNTBE13125561A16",
+                        "preview_url": "http://previews.7digital.com/clip/14254523",
+                        "foreign_id": "7digital-AU:track:14254523",
+                        "foreign_release_id": "7digital-AU:release:1291184"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/015/304/0001530483_200.jpg",
+                        "catalog": "7digital-AU",
+                        "id": "TROPFTJ135C7AED2C6",
+                        "preview_url": "http://previews.7digital.com/clip/16875417",
+                        "foreign_id": "7digital-AU:track:16875417",
+                        "foreign_release_id": "7digital-AU:release:1530483"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/032/569/0003256930_200.jpg",
+                        "catalog": "7digital-AU",
+                        "id": "TRSINHJ14567EC3A7F",
+                        "preview_url": "http://previews.7digital.com/clip/34542996",
+                        "foreign_id": "7digital-AU:track:34542996",
+                        "foreign_release_id": "7digital-AU:release:3256930"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/031/381/0003138179_200.jpg",
+                        "catalog": "7digital-AU",
+                        "id": "TRJTQCC14311E58142",
+                        "preview_url": "http://previews.7digital.com/clip/33391793",
+                        "foreign_id": "7digital-AU:track:33391793",
+                        "foreign_release_id": "7digital-AU:release:3138179"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/033/507/0003350778_200.jpg",
+                        "catalog": "7digital-AU",
+                        "id": "TRODDNG14567F302F1",
+                        "preview_url": "http://previews.7digital.com/clip/35390535",
+                        "foreign_id": "7digital-AU:track:35390535",
+                        "foreign_release_id": "7digital-AU:release:3350778"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/033/507/0003350785_200.jpg",
+                        "catalog": "7digital-AU",
+                        "id": "TRJACXY14567F30C42",
+                        "preview_url": "http://previews.7digital.com/clip/35391242",
+                        "foreign_id": "7digital-AU:track:35391242",
+                        "foreign_release_id": "7digital-AU:release:3350785"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/012/911/0001291184_200.jpg",
+                        "catalog": "7digital-US",
+                        "id": "TRFNTBE13125561A16",
+                        "preview_url": "http://previews.7digital.com/clip/14254523",
+                        "foreign_id": "7digital-US:track:14254523",
+                        "foreign_release_id": "7digital-US:release:1291184"
+                    },
+                    {
+                        "release_image": "http://artwork-cdn.7static.com/static/img/sleeveart/00/015/304/0001530483_200.jpg",
+                        "catalog": "7digital-US",
+                        "id": "TROPFTJ135C7AED2C6",
+                        "preview_url": "http://previews.7digital.com/clip/16875417",
+                        "foreign_id": "7digital-US:track:16875417",
+                        "foreign_release_id": "7digital-US:release:1530483"
+                    }
+                ],
+                "artist_id": "ARJQVBE1187FB3D623"
+            }
+        ]
+    }
+}
