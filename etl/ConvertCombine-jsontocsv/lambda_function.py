@@ -20,24 +20,25 @@ def message_processing(body):
         content_object = s3.Object(bucket, file_name)
         file_content = content_object.get()["Body"].read().decode("utf-8")
         json_content = json.loads(file_content)
-    spotify_id = None
+        spotify_id = None
 
-    if len(json_content["response"]["songs"]) > 0:
+        if len(json_content["response"]["songs"]) > 0:
 
-        track_info = json_content["response"]["songs"][0]["tracks"]
+            track_info = json_content["response"]["songs"][0]["tracks"]
 
-        song_id = json_content["response"]["songs"][0]["id"]
+            song_id = json_content["response"]["songs"][0]["id"]
 
-        for track in track_info:
-            if track["catalog"] == "spotify":
-                spotify_id = track["foreign_id"]
-                break
-    else:
-        song_id = file_name.split("/")[-1].split(".")[0]
+            for track in track_info:
+                if track["catalog"] == "spotify":
+                    spotify_id = track["foreign_id"]
+                    break
+        else:
+            song_id = file_name.split("/")[-1].split(".")[0]
 
-    song_df = pd.DataFrame({"song_id": song_id, "spotify_id": spotify_id}, index=[0])
+        song_df = pd.DataFrame({"song_id": song_id,
+                                "spotify_id": spotify_id}, index=[0])
 
-    combined_df = pd.concat([combined_df, song_df], axis=0).reset_index(drop=True)
+        combined_df = pd.concat([combined_df, song_df], axis=0).reset_index(drop=True)
 
     combined_df.to_csv(finalFileName, index=False)
 
@@ -46,6 +47,8 @@ def message_processing(body):
     s3Client.upload_file(
         finalFileName, "millionsongdataset-intermediate", "spotify/" + csv_name
     )
+
+    os.remove(finalFileName)
 
 
 def lambda_handler(event, context):
