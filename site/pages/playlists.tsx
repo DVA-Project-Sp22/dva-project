@@ -26,7 +26,7 @@ export default function Playlists(){
   return (
     <div className="w-full">
       <div className="relative py-16 overflow-hidden flex flex-col items-center justify-center">
-        <h2 className="text-2xl">Created Playlists</h2>
+        <h2 className="text-3xl font-bold">Created Playlists</h2>
         {loading ? (
           <div>Loading playlist info...</div>
         ) :
@@ -36,11 +36,12 @@ export default function Playlists(){
                 <div>{item.name}</div>
                 <button
                   type="button"
-                  className="inline-flex items-center px-6 py-3 mt-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="transition ease-in-out duration-300 inline-flex items-center px-6 py-3 mt-4 text-base font-medium text-grey-500 bg-white-600 border border-grey-200 rounded-full hover:shadow-md hover:shadow-green-500/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   <a className="w-full" href={item.external_urls?.spotify}>
                     Open in Spotify
                   </a>
+                  <img src="/spotify.svg" className="w-6 h-6 ml-2" />
                 </button>
               </div>
             )
