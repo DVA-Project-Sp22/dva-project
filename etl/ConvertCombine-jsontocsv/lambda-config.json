@@ -1,0 +1,36 @@
+{
+    "Configuration": {
+        "FunctionName": "ConvertCombine-jsontocsv",
+        "FunctionArn": "arn:aws:lambda:us-east-1:987987637308:function:ConvertCombine-jsontocsv",
+        "Runtime": "python3.9",
+        "Role": "arn:aws:iam::987987637308:role/lambda-sqs-s3",
+        "Handler": "lambda_function.lambda_handler",
+        "CodeSize": 817,
+        "Description": "",
+        "Timeout": 900,
+        "MemorySize": 256,
+        "LastModified": "2022-03-30T03:41:43.000+0000",
+        "CodeSha256": "UVs1xLUbiOILrmP/EAXVKy1vPX1HTcHnFxaIIKlBOUI=",
+        "Version": "$LATEST",
+        "TracingConfig": {
+            "Mode": "PassThrough"
+        },
+        "RevisionId": "cd645a01-9c9f-427c-a935-e58a6af58ea8",
+        "Layers": [
+            {
+                "Arn": "arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p39-pandas:2",
+                "CodeSize": 38241514
+            }
+        ],
+        "State": "Active",
+        "LastUpdateStatus": "Successful",
+        "PackageType": "Zip",
+        "Architectures": [
+            "x86_64"
+        ]
+    },
+    "Code": {
+        "RepositoryType": "S3",
+        "Location": "https://prod-04-2014-tasks.s3.us-east-1.amazonaws.com/snapshots/987987637308/ConvertCombine-jsontocsv-71c5bb4a-2420-4438-a88c-d02932c98fa6?versionId=bet9GQ1dqVGhrg4j813GFHS9LzLi0ghF&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEM7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQCEYLVOnzu8KgGHf46aUSqvwLu5Bbu47vL2wjo3INz6gQIhAMNpZGFd0O%2Bbq7mf2tjH%2BnGVZbnv2cg3iHOSJx5pkrypKvoDCGcQABoMNzQ5Njc4OTAyODM5IgxvC2MUkTKG7fcvGPkq1wMi6VcTOJx8kYXVH%2BZYh9Q8sXo%2BmO0kXwFN8DCcFpQxBrpbO5DtFXJtpv9eA8BZwWFFtvEME4J0KiLvQCMtI7c7ZYXJ6%2Bv%2FXwcOjuyFmba6hnz6kJb8qmzfgQ5te%2BAc4AUZAabbOp01b5%2B%2BMtSV9idcwtyedY7E3uzLA%2BOivz%2FBMgQcuxhAh5DJT%2FNwwwTJrAsRkFxbRa675cm718nCBZjHXVXg%2Fl3QIvomThmhF9wesaYNSYT0tzk6j1PpDWT%2B9a2J2YFuLe2ZbKvBoM4hiFlX%2FC5kgWNBKvv4%2BiuX3P%2F6%2BMJlVsonq6MzPuKkFQAgkakNR0iYOpXKJSn5ubuw%2BploSg17BoDAiRMzTE2FTHPiZd%2BAN%2BJ9rhpl4JdS3R%2B0ZoQNlNzolWoB%2BxuOk6RUMRqjMRY534JWWlnmyAA0GM5KgTH7Uju9vhRWeEKuNvKuda%2FiRfxsNNtmKe4vIEv1tR0sPmoYgJlnZb2R6zzPbJsHwaNAUFn9%2FMTHuMGyz1WD8ZIjKSlAFg1Aidtehe2sAiMqRaXLv6N2oz6s9FMiOK0rysXDEo3VmWJG36PAg5weADWmpbHjkGKdpSpaunJXCtqDU5qsW2rdFY6IwEJHyArqGH4HwXMifLowoKuokgY6pAG5A%2FR3vpy5HdTZROQrWZAnbvN2cI6EGo9ih0sCOI4%2BzCiOQ6ObA8ZpYOen2uqmpq3Ykpyp0EWAVaZVMsUAzm42zvWv4kQSCzyzyjZl%2F6GeF7N%2Fq4wgeCOG58l6UdAdNSkNWoBqClCNnKPo10vKosDMQPXd5HY3UmDVihDPEm1Zh07SAkvkPWGJSa%2BHTf1xEUdxvZEByIZm6Y6lQuQLBVmkqt425g%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220403T223335Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIA25DCYHY34PMBBSGC%2F20220403%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=18dcf23df5a68d285b70e98d5ed18cd766ee44279a345aa1f075ead4d77da5d5"
+    }
+}
