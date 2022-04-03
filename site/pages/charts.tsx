@@ -32,15 +32,11 @@ export default function Charts(){
     }]
   };
   return (
-    <div class="chart-container" style={{
-        position: 'relative', 
-        height: '40vh', 
-        width: '80vw'
-      }}>
+    <div className="chart-container">
       <Radar
         data={data}
         options={
-         { maintainAspectRatio: false }
+          { maintainAspectRatio: false }
         }
       />
     </div>
