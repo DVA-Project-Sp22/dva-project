@@ -1,8 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import SongCard from '../components/SongCard';
 
 const Home: NextPage = () => {
@@ -22,20 +19,18 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Header />
 
       <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
 
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
           {mockData.map(function(item, index) {
             return (
-              <SongCard title={item.title} artist={undefined} onChangeToggle={undefined} />
+              <SongCard key={item.title + index.toString()} title={item.title} artist={undefined} onChangeToggle={undefined} />
             )})}
 
         </div>
@@ -47,10 +42,7 @@ const Home: NextPage = () => {
           Generate Test Playlist
         </button>
       </main>
-
-      <Footer />
-
-    </div>
+    </>
   )
 }
 
