@@ -11,7 +11,6 @@ const USER_PLAYLIST_ENDPOINT = 'https://api.spotify.com/v1/me/playlists';
 const GET_PLAYLIST_ITEMS_ENDPOINT = 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks';
 
 const getAccessToken = async () => {
-  console.log('basic', basic);
   const response = await fetch(TOKEN_ENDPOINT, {
     method: 'POST',
     headers: {
@@ -43,7 +42,6 @@ export const getPlaylist = async (playlistId) => {
 export const getCurrentUserPlaylists = async () => {
   // may be worth storing this in local storage too
   const { access_token } = await getAccessToken();
-  console.log('access_token', access_token);
   // TODO: REPLACE WITH CREATED PLAYLIST ID
   return fetch(USER_PLAYLIST_ENDPOINT, {
     headers: {
