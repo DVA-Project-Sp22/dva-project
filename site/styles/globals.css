@@ -7,3 +7,11 @@ canvas {
   height: 400px;
   width: 800px;
 }
+
+#songs-wrapper {
+  display: grid;
+  grid-auto-rows: 1fr;
+
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
