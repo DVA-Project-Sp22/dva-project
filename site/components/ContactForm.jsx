@@ -57,8 +57,6 @@ function ContactForm() {
 
 	return (
 		<form name="contact-form" method="post" onSubmit={handleSubmit(onSubmit)} className="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="contact-form" />
-
       <label className="block">
         <span className="text-gray-700">Full name</span>
       <input             
@@ -125,6 +123,13 @@ function ContactForm() {
 
         </button>
       </p>
+      <input className="hidden" type="hidden" name="form-name" value="contact" />
+				<p hidden className="hidden">
+					<label>
+						Don’t fill this out: <input name="bot-field" onChange={() => {}} />
+					</label>
+				</p>
+
     </form>
 	);
 }
