@@ -25,6 +25,7 @@ const Home: NextPage = () => {
       const response = await fetch('/api/get-songs');
       const { songs } = await response.json();
       setSongs(songs);
+      setSelectedChartSong(songs[0])
     };
 
     getInitialData();
