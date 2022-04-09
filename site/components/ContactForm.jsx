@@ -28,7 +28,7 @@ function ContactForm() {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
-				'form-name': 'contact-form',
+				'form-name': 'contact',
 				...formattedData,
 			}),
 		})
@@ -57,7 +57,7 @@ function ContactForm() {
 	return (
 		<form 
     action="contact/?success=true"
-      name="contact-form" method="post" onSubmit={handleSubmit(onSubmit)} className="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
+      name="contact" method="POST" onSubmit={handleSubmit(onSubmit)} className="contact" netlify data-netlify="true" data-netlify-honeypot="bot-field">
       <label className="block">
         <span className="text-gray-700">Full name</span>
       <input             
