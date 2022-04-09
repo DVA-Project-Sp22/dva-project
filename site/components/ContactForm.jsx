@@ -37,7 +37,8 @@ function ContactForm() {
 		setFormSubmitted(true);
 	};
 
-	const onChange = (event) => {
+	const handleChange = (event) => {
+    console.log(event);
 		switch(event.target.name){
 			case "name":
 				setName(event.target.value);
@@ -58,34 +59,36 @@ function ContactForm() {
 		<form name="contact-form" method="post" onSubmit={handleSubmit(onSubmit)} className="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
       <label className="block">
         <span className="text-gray-700">Full name</span>
-      <input type="text" id="name" name="name" value={name}  className="
+      <input             
+          {...register('name', { required: true })} type="text" id="name" name="name" value={name}  className="
             mt-1
             block
             w-full
             rounded-md
             border-gray-300
             shadow-sm
-            focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="" onChange={onChange} 
-            {...register('test', { required: true })}/>
+            focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="" onChange={handleChange} 
+/>
       </label>
       <label className="block">
         <span className="text-gray-700">Email address</span>
-        <input name="email" id="email" value={email} onChange={onChange} type="email" className="
+        <input {...register('email', { required: true })} name="email" id="email" value={email} onChange={handleChange} type="email" className="
             mt-1
             block
             w-full
             rounded-md
             border-gray-300
             shadow-sm
-            focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="john@example.com" {...register('test', { required: true })}/>
+            focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="john@example.com" />
       </label>
       <div className='mt-2'>
         <label htmlFor="comment" className="block text-sm font-medium text-gray-700">
           Add any additional comments
         </label>
-        <textarea value={comment} name="comment" 
+        <textarea           
+          {...register('comment', { required: false })}
+          value={comment} onChange={handleChange} name="comment" 
           id="comment"
-          {...register('test', { required: false })}
           className="
           mt-1
           block
@@ -101,6 +104,7 @@ function ContactForm() {
         <button
           type="submit"
           onClick={onSubmit}
+          disabled={formSubmitted}
           className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-gradient-to-r from-red-500 to-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
           >
           {!formSubmitted && (
