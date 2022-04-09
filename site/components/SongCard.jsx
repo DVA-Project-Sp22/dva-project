@@ -5,16 +5,10 @@ import { ThumbDownIcon as OutlineThumb } from '@heroicons/react/outline';
 
 export default function SongCard({
   artist,
+  isChecked,
   onChangeToggle,
   title
 }) {
-
-  const [isChecked, setIsChecked] = useState(false);
-
-  const toggleChecked = () => {
-    setIsChecked(!isChecked);
-    onChangeToggle();
-  };
 
   return (
     <div className="relative flex flex-col p-[20px] mt-6 text-left bg-white border justify-evenly w-96 rounded-xl">
@@ -25,7 +19,7 @@ export default function SongCard({
             <div className="text-gray-600 font-semibold">{title}</div>
             <div className="text-sm text-gray-400">{artist}</div>
           </div>
-          <div className='cursor-pointer h-fit' onClick={toggleChecked}>
+          <div className='cursor-pointer h-fit' onClick={onChangeToggle}>
             {isChecked ? (
               <ThumbDownIcon className='w-6 h-6 fill-orange-300 stroke-orange-400 ' />
             ) : (

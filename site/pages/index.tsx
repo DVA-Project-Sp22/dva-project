@@ -104,7 +104,7 @@ const Home: NextPage = () => {
               <div id="songs-wrapper" className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full mb-12">
                 {songs.map(function(item, index) {
                   return (
-                    <SongCard key={item.song_title + index.toString()} title={item.song_title} artist={item.artist_name} onChangeToggle={() => handleToggle(item)} />
+                    <SongCard isChecked={dislikedSongs.includes(item)} key={item.song_title + index.toString()} title={item.song_title} artist={item.artist_name} onChangeToggle={() => handleToggle(item)} />
                   )})}
               </div>
             </Fragment>
