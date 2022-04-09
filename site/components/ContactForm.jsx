@@ -18,9 +18,9 @@ function ContactForm() {
 
 	const onSubmit = async (data) => {
 		var formattedData = {
-			name: data.name,
-			email: data.email,
-			comment: data.comment
+			name: name,
+			email: email,
+			comment: comment
 		};
 
 		console.log(formattedData);
@@ -67,7 +67,7 @@ function ContactForm() {
             border-gray-300
             shadow-sm
             focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="" onChange={handleChange} 
-/>
+      />
       </label>
       <label className="block">
         <span className="text-gray-700">Email address</span>
