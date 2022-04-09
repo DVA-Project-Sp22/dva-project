@@ -38,7 +38,6 @@ function ContactForm() {
 	};
 
 	const handleChange = (event) => {
-    console.log(event);
 		switch(event.target.name){
 			case "name":
 				setName(event.target.value);
