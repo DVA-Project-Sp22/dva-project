@@ -2,11 +2,12 @@ import type { NextPage } from 'next'
 import { Fragment, useCallback, useEffect, useState } from 'react'
 import Head from 'next/head'
 import SongCard from '../components/SongCard';
-import { ArrowNarrowRightIcon, ChevronUpIcon, ExclamationIcon  } from '@heroicons/react/solid';
+import { ArrowNarrowRightIcon, ChevronUpIcon, ExclamationIcon, MailIcon  } from '@heroicons/react/solid';
 import { AnimatePresence, motion } from 'framer-motion';
 import BottomBar from '../components/BottomBar';
 import Select from '../components/Select';
 import Chart from '../components/Chart';
+import ContactForm from '../components/ContactForm';
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState<Boolean>(false);
@@ -132,6 +133,9 @@ const Home: NextPage = () => {
               {selectedChartSong && (
                 <Chart chosenSong={selectedChartSong}/>
               )}
+            </div>
+            <div className='mt-2'>
+              <ContactForm />
             </div>
 
           </div>

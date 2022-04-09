@@ -18,7 +18,6 @@ export default function BottomBar({
     open: { height: '66%' },
     closed: { height: '6rem' },
   };
-  
 
   return (
     <motion.div 
