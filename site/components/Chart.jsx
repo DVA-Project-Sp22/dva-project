@@ -11,8 +11,8 @@ export default function Chart ({ chosenSong }) {
       'Artist Familiarity',
     ],
     datasets: [{
-      label: chosenSong.name,
-      data: [chosenSong.loudness, chosenSong.tempo, chosenSong.artistFamiliarity],
+      label: chosenSong.song_title,
+      data: [chosenSong.loudness, chosenSong.tempo, chosenSong.artist_familiarity],
       fill: true,
       backgroundColor: 'rgba(129, 140, 248, 0.2)',
       borderColor: 'rgb(129, 140, 248)',
