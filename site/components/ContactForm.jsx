@@ -21,7 +21,7 @@ function ContactForm() {
   const onSubmit = async (data) => {
     var formattedData = {
       name: 'Ryan M', // name,
-      email: 'ryan@gmail.com', //v email,
+      email: 'ryan10921@gmail.com', //v email,
       comment: 'Does this work?', // comment,
     }
 
@@ -63,7 +63,6 @@ function ContactForm() {
       onSubmit={handleSubmit(onSubmit)}
       className="contact"
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
     >
       <p className="mt-4">
         <button
@@ -93,11 +92,6 @@ function ContactForm() {
         name="form-name"
         value="contact"
       />
-      <p hidden className="hidden">
-        <label>
-          Don’t fill this out: <input name="bot-field" onChange={() => {}} />
-        </label>
-      </p>
     </form>
   )
 }
