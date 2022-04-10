@@ -64,6 +64,12 @@ function ContactForm() {
       className="contact"
       data-netlify="true"
     >
+      <input
+        className="hidden"
+        type="hidden"
+        name="form-name"
+        value="contact"
+      />
       <p className="mt-4">
         <button
           type="submit"
@@ -86,12 +92,6 @@ function ContactForm() {
           )}
         </button>
       </p>
-      <input
-        className="hidden"
-        type="hidden"
-        name="form-name"
-        value="contact"
-      />
     </form>
   )
 }
