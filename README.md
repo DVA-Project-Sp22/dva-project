@@ -30,8 +30,7 @@ And then you can process the data into CSV format by using the code in the Conve
 
 ### EDA
 
-Blah blah blah I don't know what to write here.
-
+We ran K-means clustering with different combinations of features, which led to different posssible models. We found the model with the highest Silhouette Score and Calinski-Harabasz Index.
 ### Model Building
 
-Blah blah blah I don't know what to write here.
+We then determined least-disliked songs by using distance between clusters to find the farthest cluster from a given disliked song, then picking the song in that cluster that was farthest from the disliked song.
