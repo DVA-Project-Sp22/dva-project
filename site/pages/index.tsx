@@ -8,6 +8,7 @@ import BottomBar from '../components/BottomBar';
 import Select from '../components/Select';
 import Chart from '../components/Chart';
 import ContactForm from '../components/ContactForm';
+import BarChart from '../components/BarChart';
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState<Boolean>(false);
@@ -128,11 +129,16 @@ const Home: NextPage = () => {
         )}
         {hasGeneratedPlaylist && (
           <div className="w-6/12 text-left">
+            <h3 className="text-2xl font-bold mb-8 text-gray-700">Results Explorer</h3>
             <Select data={songs} onChange={handleClick} />
             <div className="mt-2">
               {selectedChartSong && (
-                <Chart chosenSong={selectedChartSong}/>
+                <Chart chosenSong={selectedChartSong} playlistSongs={songs}/>
               )}
+            </div>
+            <div className="mt-4">
+              <h3 className="text-xl font-bold mb-8 text-gray-700">Attribute Explorer</h3>
+              <BarChart playlistSongs={songs} />
             </div>
             <div className='mt-2'>
               <ContactForm />
