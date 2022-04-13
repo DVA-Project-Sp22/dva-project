@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { CheckIcon, MailIcon } from '@heroicons/react/solid'
+const FORMSPARK_ACTION_URL = 'https://submit-form.com/gU7Rj42p'
 
 function ContactForm() {
   const [formSubmitted, setFormSubmitted] = useState(false)
@@ -18,21 +19,23 @@ function ContactForm() {
       .join('&')
   }
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (e) => {
+    e.preventDefault()
+
     var formattedData = {
-      name: 'Ryan M', // name,
-      email: 'ryan@gmail.com', //v email,
-      comment: 'Does this work?', // comment,
+      name: name,
+      email: email,
+      comment: comment,
     }
 
     console.log(formattedData)
-    await fetch('/', {
+    await fetch(FORMSPARK_ACTION_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': 'contact',
-        ...formattedData,
-      }),
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(formattedData),
     })
 
     // submit form and then change state so icon change
@@ -62,8 +65,51 @@ function ContactForm() {
       method="POST"
       onSubmit={handleSubmit(onSubmit)}
       className="contact"
-      data-netlify="true"
     >
+      <label className="block">
+        <span className="text-gray-700">Full name</span>
+        <input
+          {...register('name', { required: true })}
+          type="text"
+          id="name"
+          name="name"
+          value={name}
+          className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          placeholder=""
+          onChange={handleChange}
+        />
+      </label>
+      <label className="block">
+        <span className="text-gray-700">Email address</span>
+        <input
+          {...register('email', { required: true })}
+          name="email"
+          id="email"
+          value={email}
+          onChange={handleChange}
+          type="email"
+          className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          placeholder="john@example.com"
+        />
+      </label>
+      <div className="mt-2">
+        <label
+          htmlFor="comment"
+          className="block text-sm font-medium text-gray-700"
+        >
+          Add any additional comments
+        </label>
+        <textarea
+          {...register('comment', { required: false })}
+          value={comment}
+          onChange={handleChange}
+          name="comment"
+          id="comment"
+          className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          rows={3}
+        ></textarea>
+      </div>
+
       <p className="mt-4">
         <button
           type="submit"
