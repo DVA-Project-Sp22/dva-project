@@ -3,24 +3,29 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "How does this work?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Insert explanation here",
   },
   {
-    question: "What's the best thing about USA?",
+    question: "What technologies were used for this project?",
     answer:
-      "Haha good one",
+      "We used Next.js, React, and Chart.js to build the frontend. There is an extensive data backend that uses many AWS products, such as S3, Lambda, and SQS. This site is hosted on Netlify.",
   },
   {
-    question: "What's the best thing about England?",
+    question: "Where can I see all the generated playlists?",
     answer:
-      "Obviously the food",
+      "Add link to generated playlists",
   },
   {
-    question: "What's the best thing about Italy?",
+    question: "This is cool - can I clone this?",
     answer:
-      "Obviously also the food",
+      "Unfortunately, this repository is closed-source and not available to the general public.",
+  },
+  {
+    question: "Why can't I use my Spotify account?",
+    answer:
+      "To limit our general project scope, we have decided to use a separate account for this project as this project is mainly proof-of-concept.",
   },
   // More questions...
 ]
@@ -31,7 +36,7 @@ function classNames(...classes: string[]) {
 
 export default function FAQ() {
   return (
-    <div className="w-full">
+    <div className="w-full h-screen">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
           <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Frequently asked questions</h2>
