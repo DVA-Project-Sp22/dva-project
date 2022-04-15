@@ -12,6 +12,7 @@ const ADD_ITEMS_TO_PLAYLIST_ENDPOINT =
 const USER_PLAYLIST_ENDPOINT = 'https://api.spotify.com/v1/me/playlists'
 const GET_PLAYLIST_ITEMS_ENDPOINT =
   'https://api.spotify.com/v1/playlists/{playlist_id}/tracks'
+const GET_TRACKS_ENDPOINT = 'https://api.spotify.com/v1/tracks'
 
 const getAccessToken = async () => {
   const response = await fetch(TOKEN_ENDPOINT, {
@@ -51,6 +52,18 @@ export const getCurrentUserPlaylists = async () => {
   console.log(access_token)
   // TODO: REPLACE WITH CREATED PLAYLIST ID
   return fetch(USER_PLAYLIST_ENDPOINT, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  })
+}
+
+export const getTracks = async (tracksQuery) => {
+  const { access_token } = await getAccessToken()
+  var url = new URL(GET_TRACKS_ENDPOINT)
+  url.searchParams.append('ids', tracksQuery)
+
+  return fetch(url, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },

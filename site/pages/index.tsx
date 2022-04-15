@@ -15,10 +15,12 @@ import Chart from '../components/Chart'
 import ContactForm from '../components/ContactForm'
 import BarChart from '../components/BarChart'
 import { addItemsToPlaylist, addPlaylist } from '../lib/spotify'
+import { InferGetServerSidePropsType } from 'next'
 
-const Home: NextPage = () => {
+function Home({
+  songs,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [isLoading, setIsLoading] = useState<Boolean>(false)
-  const [songs, setSongs] = useState<any[]>([])
   const [hasGeneratedPlaylist, setHasGeneratedPlaylist] =
     useState<Boolean>(false)
 
@@ -34,14 +36,7 @@ const Home: NextPage = () => {
   )
 
   useEffect(() => {
-    const getInitialData = async () => {
-      const response = await fetch('/api/get-songs')
-      const { songs } = await response.json()
-      setSongs(songs)
-      setSelectedChartSong(songs[0])
-    }
-
-    getInitialData()
+    setSelectedChartSong(songs[0])
   }, [])
 
   const generatePlaylist = async (event: any) => {
@@ -153,6 +148,7 @@ const Home: NextPage = () => {
                       key={item.song_title + index.toString()}
                       title={item.song_title}
                       artist={item.artist_name}
+                      image={item.imageUrl}
                       onChangeToggle={() => handleToggle(item)}
                     />
                   )
@@ -206,6 +202,40 @@ const Home: NextPage = () => {
       </main>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const isDevEnv = process.env.NODE_ENV !== 'production'
+  const server = isDevEnv
+    ? 'http://localhost:3000'
+    : 'https://diva-music.netlify.app/'
+
+  // Fetch data from external API
+  const response = await fetch(`${server}/api/get-songs`)
+  const { songs } = await response.json()
+  const filtered = songs.filter(
+    (s: { spotify_id: string }) => s.spotify_id !== ''
+  )
+
+  const filteredIds = filtered
+    .map((s: { spotify_id: string }) => s.spotify_id.split(':')[2])
+    .join(',')
+
+  // go get album art/link the records
+  const spotifyResponse = await fetch(
+    `${server}/api/get-tracks?ids=${filteredIds}`
+  )
+  const spotData = await spotifyResponse.json()
+
+  const filteredSongs = filtered.map((s: any, index: number) => {
+    return {
+      ...s,
+      imageUrl: spotData.tracks[index].album.images[0].url,
+      playUrl: spotData.tracks[index].external_urls?.spotify || '',
+    }
+  })
+  // Pass data to the page via props
+  return { props: { songs: filteredSongs } }
 }
 
 export default Home
