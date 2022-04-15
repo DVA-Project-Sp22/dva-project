@@ -40,4 +40,7 @@ We then determined least-disliked songs by using distance between clusters to fi
 
 There are a few prerequisites to getting the frontend running locally. You must have Node version >= `16.13.0` installed (or at least an LTS version). You will also need to create a `.env` file in the `/site` folder - this file houses all Spotify and AWS API Gateway credentials. If you decide to use a custom API backend, then ignore any references to `DVA_API_ENDPOINT` and `DVA_API_KEY` as those are specific to this project instance.
 
-A good blog post to generate the Spotify environment variables is [this one](https://leerob.io/blog/spotify-api-nextjs).
+## Additional site notes
+
+- This site is best experienced on desktop viewports.
+- A good blog post to generate the Spotify environment variables is [this one](https://leerob.io/blog/spotify-api-nextjs).
