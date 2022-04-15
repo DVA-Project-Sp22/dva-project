@@ -31,6 +31,13 @@ And then you can process the data into CSV format by using the code in the Conve
 ### EDA
 
 We ran K-means clustering with different combinations of features, which led to different posssible models. We found the model with the highest Silhouette Score and Calinski-Harabasz Index.
+
 ### Model Building
 
 We then determined least-disliked songs by using distance between clusters to find the farthest cluster from a given disliked song, then picking the song in that cluster that was farthest from the disliked song.
+
+### Running the website locally
+
+There are a few prerequisites to getting the frontend running locally. You must have Node version >= `16.13.0` installed (or at least an LTS version). You will also need to create a `.env` file in the `/site` folder - this file houses all Spotify and AWS API Gateway credentials. If you decide to use a custom API backend, then ignore any references to `DVA_API_ENDPOINT` and `DVA_API_KEY` as those are specific to this project instance.
+
+A good blog post to generate the Spotify environment variables is [this one](https://leerob.io/blog/spotify-api-nextjs).
