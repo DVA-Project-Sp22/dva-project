@@ -142,7 +142,12 @@ function Home({
                 className="flex flex-wrap items-center justify-around max-w-4xl mt-6 mb-12 sm:w-full"
               >
                 {songs.map(function (
-                  item: { song_title: any; artist_name: any; imageUrl: any },
+                  item: {
+                    song_title: any
+                    artist_name: any
+                    imageUrl: any
+                    playUrl: any
+                  },
                   index: { toString: () => any }
                 ) {
                   return (
@@ -152,6 +157,7 @@ function Home({
                       title={item.song_title}
                       artist={item.artist_name}
                       image={item.imageUrl}
+                      playUrl={item.playUrl}
                       onChangeToggle={() => handleToggle(item)}
                     />
                   )
