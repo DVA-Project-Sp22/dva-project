@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import Image from 'next/image'
 import { Fragment, useCallback, useEffect, useState } from 'react'
 import Head from 'next/head'
 import SongCard from '../components/SongCard'
@@ -66,7 +66,7 @@ function Home({
         const x = await addItemsResponse.json()
         console.log({ x })
         setPlaylistSongs(data.songs)
-        setSpotifyPlaylistId(playlistData.id)
+        setSpotifyPlaylistId(playlistData.external_urls?.spotify)
       }
 
       setIsLoading(false)
@@ -184,9 +184,17 @@ function Home({
         )}
         {hasGeneratedPlaylist && (
           <div className="w-6/12 text-left">
-            <h3 className="mb-8 text-2xl font-bold text-gray-700">
+            <h3 className="mb-4 text-2xl font-bold text-gray-700">
               Results Explorer
             </h3>
+            <a
+              href={spotifyPlaylistId}
+              target="_blank"
+              className="inline-flex items-center px-4 py-2 mt-2 mb-4 text-base font-medium text-green-500 bg-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+            >
+              View Playlist
+              <img className="w-12 ml-2" src="/spotify.png" />
+            </a>
             <Select data={songs} onChange={handleClick} />
             <div className="mt-2">
               {selectedChartSong && (
