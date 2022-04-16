@@ -49,7 +49,6 @@ export const getPlaylist = async (playlistId) => {
 export const getCurrentUserPlaylists = async () => {
   // may be worth storing this in local storage too
   const { access_token } = await getAccessToken()
-  console.log(access_token)
   // TODO: REPLACE WITH CREATED PLAYLIST ID
   return fetch(USER_PLAYLIST_ENDPOINT, {
     headers: {

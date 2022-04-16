@@ -1,20 +1,14 @@
-import Image from 'next/image'
 import { Fragment, useCallback, useEffect, useState } from 'react'
 import Head from 'next/head'
 import SongCard from '../components/SongCard'
-import {
-  ArrowNarrowRightIcon,
-  ChevronUpIcon,
-  ExclamationIcon,
-  MailIcon,
-} from '@heroicons/react/solid'
+import { ExclamationIcon } from '@heroicons/react/solid'
 import { AnimatePresence, motion } from 'framer-motion'
 import BottomBar from '../components/BottomBar'
 import Select from '../components/Select'
 import Chart from '../components/Chart'
 import ContactForm from '../components/ContactForm'
 import BarChart from '../components/BarChart'
-import { addItemsToPlaylist, addPlaylist } from '../lib/spotify'
+import RadarChart from '../components/RadarChart'
 import { InferGetServerSidePropsType } from 'next'
 
 function Home({
@@ -64,7 +58,6 @@ function Home({
           method: 'POST',
         })
         const x = await addItemsResponse.json()
-        console.log({ x })
         setPlaylistSongs(data.songs)
         setSpotifyPlaylistId(playlistData.external_urls?.spotify)
       }
@@ -203,11 +196,25 @@ function Home({
                   playlistSongs={playlistSongs}
                 />
               )}
+              <div className="mt-4">
+                <h3 className="mb-8 text-xl font-bold text-gray-700">
+                  Playlist Comparison
+                </h3>
+                <RadarChart
+                  dislikedSongs={dislikedSongs}
+                  playlistSongs={playlistSongs}
+                />
+              </div>
             </div>
             <div className="mt-4">
-              <h3 className="mb-8 text-xl font-bold text-gray-700">
-                Attribute Explorer
-              </h3>
+              <div className="flex items-center mb-8">
+                <h3 className="text-xl font-bold text-gray-700">
+                  Attribute Explorer
+                </h3>
+                <span className="text-sm text-gray-300">
+                  (of songs in generated playlist)
+                </span>
+              </div>
               <BarChart playlistSongs={playlistSongs} />
             </div>
             <div className="mt-8">
