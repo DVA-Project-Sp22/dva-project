@@ -1,56 +1,51 @@
-import { useState } from 'react';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion'
+import { PlayIcon, ThumbDownIcon } from '@heroicons/react/solid'
+import { ThumbDownIcon as OutlineThumb } from '@heroicons/react/outline'
+
 export default function SongCard({
   artist,
+  image,
+  isChecked,
   onChangeToggle,
-  title
+  playUrl,
+  title,
 }) {
-
-  const [isChecked, setIsChecked] = useState(true);
-  const pathLength = useMotionValue(0);
-  const opacity = useTransform(pathLength, [0.05, 0.15], [0, 1]);
+  const MotionIcon = motion(PlayIcon)
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white mt-6 w-96 rounded-xl border p-6 text-left focus:text-indigo-600">      
-      <div>{title}</div>
-      <div>{artist}</div>
-      <div className="flex items-center gap-1">
-        <span>This vibe?</span>
-        <motion.div
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: 8,
-            backgroundColor: "#F1F5F9",
-            cursor: "pointer",
-          }}
-          animate={{
-              scale: isChecked ? 1 : 0.8,
-              backgroundColor: isChecked
-                  ? "rgba(241, 245, 249, 1)"
-                  : "rgba(241, 245, 249 ,0.5)",
-          }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          onTap={() => setIsChecked(!isChecked)}
-        >
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 150 150"
-          >
-            <motion.path
-                d="M38 74.707l24.647 24.646L116.5 45.5"
-                fill="transparent"
-                strokeWidth="15"
-                stroke="#8B5CF6"
-                strokeLinecap="round"
-                initial={{ pathLength: 0.9, opacity: 1 }}
-                animate={{ pathLength: isChecked ? 0.9 : 0 }}
-                style={{ pathLength: pathLength, opacity: opacity }}
-            />
-          </svg>
-        </motion.div>
+    <div className="relative mt-6 flex w-96 flex-col justify-evenly rounded-xl border bg-white p-[20px] text-left">
+      <div className="flex w-full">
+        <div className="relative flex-none">
+          <img
+            className="h-[75px] w-[75px] rounded border border-gray-100 shadow-sm "
+            src={
+              image ? image : 'https://randomuser.me/api/portraits/men/20.jpg'
+            }
+            alt="user image"
+          />
+          <div className="absolute flex items-center justify-center p-2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-200 rounded-full top-1/2 left-1/2">
+            <motion.a href={playUrl} target="_blank">
+              <MotionIcon
+                whileHover={{ opacity: 1, scale: 1.2 }}
+                className="w-8 h-8 cursor-pointer fill-green-500"
+              />
+            </motion.a>
+          </div>
+        </div>
+
+        <div className="flex justify-between w-full ml-2">
+          <div className="flex flex-col">
+            <div className="font-semibold text-gray-600">{title}</div>
+            <div className="text-sm text-gray-400">{artist}</div>
+          </div>
+          <div className="cursor-pointer h-fit" onClick={onChangeToggle}>
+            {isChecked ? (
+              <ThumbDownIcon className="w-6 h-6 fill-orange-300 stroke-orange-400 " />
+            ) : (
+              <OutlineThumb className="w-6 h-6 stroke-gray-400 " />
+            )}
+          </div>
+        </div>
       </div>
     </div>
   )

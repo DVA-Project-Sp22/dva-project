@@ -8,7 +8,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <div className="bg-gray-100 flex min-h-screen flex-col items-center justify-between">
     <Header />
     <Component {...pageProps} />
-    <Footer />
   </div>
   )
 }
