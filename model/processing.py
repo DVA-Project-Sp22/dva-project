@@ -5,7 +5,7 @@ from sklearn.cluster import KMeans
 
 def add_cluster_id(df):
 
-    max_cluster_size = 25
+    max_cluster_size = 200
     k = int(len(df) / max_cluster_size)
 
     print("Processing Data")
