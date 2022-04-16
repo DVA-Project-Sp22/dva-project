@@ -141,7 +141,10 @@ function Home({
                 id="songs-wrapper"
                 className="flex flex-wrap items-center justify-around max-w-4xl mt-6 mb-12 sm:w-full"
               >
-                {songs.map(function (item, index) {
+                {songs.map(function (
+                  item: { song_title: any; artist_name: any; imageUrl: any },
+                  index: { toString: () => any }
+                ) {
                   return (
                     <SongCard
                       isChecked={dislikedSongs.includes(item)}
