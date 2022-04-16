@@ -195,17 +195,20 @@ function Home({
               View Playlist
               <img className="w-12 ml-2" src="/spotify.png" />
             </a>
-            <Select data={songs} onChange={handleClick} />
+            <Select data={playlistSongs} onChange={handleClick} />
             <div className="mt-2">
               {selectedChartSong && (
-                <Chart chosenSong={selectedChartSong} playlistSongs={songs} />
+                <Chart
+                  chosenSong={selectedChartSong}
+                  playlistSongs={playlistSongs}
+                />
               )}
             </div>
             <div className="mt-4">
               <h3 className="mb-8 text-xl font-bold text-gray-700">
                 Attribute Explorer
               </h3>
-              <BarChart playlistSongs={songs} />
+              <BarChart playlistSongs={playlistSongs} />
             </div>
             <div className="mt-8">
               <h3 className="mb-4 text-2xl font-bold text-gray-700">
