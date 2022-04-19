@@ -51,6 +51,9 @@ function Home({
 
     if (response) {
       const data = await response.json()
+
+      setSelectedChartSong(data.songs[0])
+
       // now create spotify playlist from the songs
       const spotifyResponse = await fetch('/api/add-playlist')
       const playlistData = await spotifyResponse.json()
