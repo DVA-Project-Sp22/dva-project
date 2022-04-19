@@ -1,12 +1,9 @@
-export default async function handler(_, res) {
-  const formattedEndpoint = `${process.env.DVA_API_ENDPOINT}/generateplaylist`;
-  
-  const myHeaders = new Headers();
-  myHeaders.append('x-api-key', process.env.DVA_API_KEY);
+export default async function handler(req, res) {
+  let formattedEndpoint = `https://xl22m4quvvtnitrymnl6fa2slu0ssrjr.lambda-url.us-east-1.on.aws/`;
 
   const response = await fetch(formattedEndpoint, {
-    headers: myHeaders,
     method: 'POST', //TODO: add body
+    body: req.body
   });
 
   const data = await response.json();  

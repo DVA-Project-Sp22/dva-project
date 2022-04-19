@@ -40,7 +40,11 @@ function Home({
     // post to the api - this gives us our songs to add
     const response = await fetch('/api/generate-playlist', {
       method: 'POST',
+      body: JSON.stringify({
+        dislikedSongs: dislikedSongs.map(s => s.track_id),
+      }),
     })
+
     if (response) {
       const data = await response.json()
       // now create spotify playlist from the songs
@@ -253,6 +257,8 @@ export async function getServerSideProps() {
     `${server}/api/get-tracks?ids=${filteredIds}`
   )
   const spotData = await spotifyResponse.json()
+
+  console.log(spotData);
 
   const filteredSongs = filtered.map((s: any, index: number) => {
     return {
