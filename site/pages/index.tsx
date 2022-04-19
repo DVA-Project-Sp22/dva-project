@@ -37,6 +37,9 @@ function Home({
     event.preventDefault()
     setIsLoading(true)
 
+    const myHeaders = new Headers();
+    myHeaders.append('Access-Control-Allow-Origin','*');
+
     // post to the api - this gives us our songs to add
     const response = await fetch('https://xl22m4quvvtnitrymnl6fa2slu0ssrjr.lambda-url.us-east-1.on.aws/', {
       method: 'POST',
