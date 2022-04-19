@@ -46,6 +46,7 @@ function Home({
       body: JSON.stringify({
         dislikedSongs: dislikedSongs.map(s => s.track_id),
       }),
+      headers: myHeaders,
     })
 
     if (response) {
