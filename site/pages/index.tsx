@@ -38,7 +38,7 @@ function Home({
     setIsLoading(true)
 
     // post to the api - this gives us our songs to add
-    const response = await fetch('/api/generate-playlist', {
+    const response = await fetch('https://xl22m4quvvtnitrymnl6fa2slu0ssrjr.lambda-url.us-east-1.on.aws/', {
       method: 'POST',
       body: JSON.stringify({
         dislikedSongs: dislikedSongs.map(s => s.track_id),
