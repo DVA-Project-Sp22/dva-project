@@ -1,6 +1,8 @@
-# CS6242-Final_Project
+# CSE 6242 Group Project - DiVA
 
-This repository will contain the group work for our Georgia Tech CS6242(Data Visualization and Analytics) Final course project.
+This repository will contain the group work for our Georgia Tech CSE 6242 (Data Visualization and Analytics) Final course project.
+
+We're calling our project DiVA an app and visualization that helps you find songs that are the opposite of songs you don't like.
 
 ## Directions
 
