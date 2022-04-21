@@ -1,0 +1,36 @@
+{
+    "Configuration": {
+        "FunctionName": "api-getsongs",
+        "FunctionArn": "arn:aws:lambda:us-east-1:987987637308:function:api-getsongs",
+        "Runtime": "python3.9",
+        "Role": "arn:aws:iam::987987637308:role/service-role/api-getsongs-role-n0cl6xqh",
+        "Handler": "lambda_function.lambda_handler",
+        "CodeSize": 480,
+        "Description": "",
+        "Timeout": 900,
+        "MemorySize": 1024,
+        "LastModified": "2022-04-18T23:05:34.000+0000",
+        "CodeSha256": "ZBHikCPda1t0tIe0VyctfVaOpnayvK5CLBXZcS26CGI=",
+        "Version": "$LATEST",
+        "TracingConfig": {
+            "Mode": "PassThrough"
+        },
+        "RevisionId": "07c038df-38e5-4f43-8203-1d08f6469035",
+        "Layers": [
+            {
+                "Arn": "arn:aws:lambda:us-east-1:336392948345:layer:AWSDataWrangler-Python39:5",
+                "CodeSize": 45533909
+            }
+        ],
+        "State": "Active",
+        "LastUpdateStatus": "Successful",
+        "PackageType": "Zip",
+        "Architectures": [
+            "x86_64"
+        ]
+    },
+    "Code": {
+        "RepositoryType": "S3",
+        "Location": "https://prod-04-2014-tasks.s3.us-east-1.amazonaws.com/snapshots/987987637308/api-getsongs-4d7037ce-de69-4ab2-8c51-a9db89c1334e?versionId=PfqlUOs9F5YUg8Km9DaeDdtbTSASMyA5&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGcaCXVzLWVhc3QtMSJGMEQCIFl6qzItF32IVRwX1%2FDEEjF%2Bwry22H%2BFGYbZ9fXeEOPYAiAn8A%2Bob%2FxF3%2BoCohjkvYCV7TF%2FMa7fXkedi2hNERwhLCr6AwggEAAaDDc0OTY3ODkwMjgzOSIME9QyKbEBoTmUgQ48KtcDAPDq9s6Ks254vkBrhX%2FIkPHctmdb5i3dyONIKDzOOrUAJvavwb2q8ME3jPAZJe2Vm9k2SEsfBSAnAoA%2Ft2imUr5SUCiARvGLwqfIXiAHtjeh9dJI0SibaU%2F9DE%2FvYDV9AFvg4FTtPTE%2B7CPpKqFEJ%2B3E4u%2BOw7oTUV%2BcA9uH0Jo1bl7DYEIxcZOt4UC%2BFsVyI%2BYQHuLHmpZ9UWUL40ZhnXh1VW5KIhN308b3iGmdpdwRDpg3PufJhD4o3%2FAJWYVp61HINBMwI98f4%2FYFdHk%2FI0O29LKG0bGyBuk2Z3%2Far9biiYpckkT2L2L3tX9viurQCK4rUXiVfsTN5VBpyVnMD6CTWcNcl%2F2EQu4vSW4Dc2KR8sCZfA08LzxMBRQGdWEW0NBVOZnixcjVBqvbfTYXAl9WwMG6UJAQ7u%2F95%2FySYXYeMANzmdEVmFwm3owwo3RNnTWjv37i6dcZ6jPfkfxqtxBUgx8BF2KDqTvvZZhOoW7Rmyw07JJ248%2F9B0Xj4fOjsbqfPHwUiCkKoy5haNJKqOcqWQEerf9dEXGSNGyLz59Vz8mvdgb%2FJWux7kcZCHduGqAZdd10epMnWEqNKX1TD1Q16fjS3gx5OoDmE4PG1bwpx6P4CFTeMJ6hgpMGOqYB9nehz%2BriXg4i3iHXpCMpdzbwpmk8dD%2Fa%2FACJCSxWZe%2Bg05b55pSadSXJBB0stmU8ZU4HAgth1F4h%2Bg7Loy1p%2FGtBAzRKdkSDEhSPYy1f21WuQqRG0j3wIYmF0ueBPZ2gXcZufCqYBiCglxAWUJESVybWXSLjgOSQ9%2FJlHrwSEqwy8ggddTTboZp8i0O47GZmr7dFhiAdObbjZYTcpdbumx1ClDvmZg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220421T001806Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIA25DCYHY3VFNOOAXC%2F20220421%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=50785676b6556dffd4fd02fb80c3e5cf2936e858361d81b9db5bd5d36b12a591"
+    }
+}
