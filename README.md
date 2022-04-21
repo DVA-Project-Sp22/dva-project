@@ -2,9 +2,11 @@
 
 This repository will contain the group work for our Georgia Tech CSE 6242 (Data Visualization and Analytics) Final course project.
 
-We're calling our project DiVA an app and visualization that helps you find songs that are the opposite of songs you don't like.
+## DESCRIPTION
 
-## Directions
+We're calling our project DiVA an app and visualization that helps you find songs that are the opposite of songs you don't like. This site is designed to help people who are less concerned with finding songs they love and instead want to find songs that don't offend people. Examples of groups this would appeal to are coffee shops, public areas and places that care about having background music but not great music.
+
+## INSTALLATION
 
 Here are directions for recreating this project broken up by the various sections of the project starting with ETL and ending with the actual website.
 
@@ -63,6 +65,15 @@ You can access our API endpoints by using the API credentials included in this Z
 ### Running the website locally
 
 There are a few prerequisites to getting the frontend running locally. You must have Node version >= `16.13.0` installed (or at least an LTS version). You will also need to create a `.env` file in the `/site` folder - this file houses all Spotify and AWS API Gateway credentials. If you decide to use a custom API backend, then ignore any references to `DVA_API_ENDPOINT` and `DVA_API_KEY` as those are specific to this project instance.
+
+### EXECUTION
+
+Once you have the code running on your local computer, you can run a demo:
+
+- You will be first presented with a list of 10 randomly generated songs.
+- Click on “Dislike” buttons to choose songs that you don’t want.
+- Click on “Generate Playlist”. The application will then generate a list of 10 songs based on our algorithm.
+- You can explore the recommendations using the dropdown. This allows you to browse each recommended song and see how its attributes compare to the whole playlist’s as well as the disliked songs’.
 
 ## Additional site notes
 
