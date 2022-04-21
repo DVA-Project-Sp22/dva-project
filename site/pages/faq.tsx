@@ -4,7 +4,7 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 const faqs = [
   {
     question: 'How does this work?',
-    answer: 'Insert explanation here',
+    answer: 'DiVA is a system that takes a new approach to a common use-case: playlist generation. While many systems emphasize playlists consisting of songs similar to those that users like, DiVA focuses on returning songs that the user is likely to not dislike. The primary motivation behind this is public space music recommendation, where playing the favorite song doesnt matter, instead focusing on playing songs users wont dislike. Preliminary K-means clustering: to select a set of features that produced clearly defined song clusters. Three features, loudness, artist familiarity, and tempo, were chosen based on the Calinski-Harabasz score and silhouette score of clusters. Profanity filtering: As it was difficult to source clean, complete lyrics for a large collection of songs, we attached a boolean flag and proportion of expletives to each song and filtered data to avoid songs with profanity. Future work can expand on degree of profanity or introducing concept of tolerance by varying proportion of expletives in recommendations. Weighted similarity matrix: After running clustering, we calculated the farthest cluster from a given song in three-dimensional space. We evaluated our model against music preferences from a survey that was sent to classmates.',
   },
   {
     question: 'What technologies were used for this project?',
