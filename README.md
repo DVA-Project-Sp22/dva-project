@@ -4,6 +4,8 @@ This repository will contain the group work for our Georgia Tech CS6242(Data Vis
 
 ## Directions
 
+Here are directions for recreating this project broken up by the various sections of the project starting with ETL and ending with the actual website.
+
 ### ETL
 
 The million song dataset is available as a [Amazon Public Dataset Snapshot](https://aws.amazon.com/datasets/million-song-dataset/). The instructions for how to download the dataset are on the [Million Song Dataset website](http://millionsongdataset.com/pages/getting-dataset/).
@@ -28,13 +30,27 @@ aws s3 sync . s3://echonest-intermediate-json/json
 
 And then you can process the data into CSV format by using the code in the ConvertCombine-jsontocsv folder. You can create a Lambda function and a SQS queue by using the lambda-config.json and sqs-config.json files. The code for the lambda function is in the lambda_function.py file. Then to populate the SQS Queue you can follow the instructions in load-sqs.ipynb.
 
+Once we got the data into this Intermediate format we started doing EDA and playing around with the data. You may notice some of the files referencing the Intermediate bucket. However to then move the data into the final format we used Python and a Jupyter Notebook with PyAthena to do the ETL. You can run the FinalDataProcessing.ipynb notebook to do the ETL and finally condense all the data into once CSV of a little less than 500K records.
+
 ### EDA
 
-We ran K-means clustering with different combinations of features, which led to different posssible models. We found the model with the highest Silhouette Score and Calinski-Harabasz Index.
+In our EDA folder we have two different Jupyter Notebooks where two members of our teams worked on exploring the data and trying to find the best way to model it. Ultimately they decided on K-means.
 
 ### Model Building
 
-We then determined least-disliked songs by using distance between clusters to find the farthest cluster from a given disliked song, then picking the song in that cluster that was farthest from the disliked song.
+We ran K-means clustering with different combinations of features, which led to different posssible models. We found the model with the highest Silhouette Score and Calinski-Harabasz Index. We then determined least-disliked songs by using distance between clusters to find the farthest cluster from a given disliked song, then picking the song in that cluster that was farthest from the disliked song.
+
+To generate our model go to the Model section and run the RunSagemakerMode.ipynb notebook this will create a Sagemaker Processing job that will run. This job will take over 5 hours to run. Once the job is completed it will output two files, one with the Songdata now having a ClusterID added and the other will be a file with the Centroids for the Clusters.
+
+We need to convert the Cluster Centroids to a Distance Matrix. To do this you can run the CalculateDistance.ipynb notebook. This will give you the final output of the model which can be consumed by our API.
+
+### API
+
+The back-end of our site is two API endpoints managed by an API Gateway in AWS. The first API endpoint is a Lambda function that will pick 10 songs for users to look at and decide which they like or don't like.
+
+The second API endpoint is a Lambda function that takes in a list of Track IDs that the user doesn't like and then determines the songs that are least similar to those songs. This is calculated by finding the Cluster with the farthest Euclidean distance from the average of the user's disliked songs.
+
+You can access our API endpoints by using the API credentials included in this Zip file. Please look at credentials.json for more information.
 
 ### Running the website locally
 
