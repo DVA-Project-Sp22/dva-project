@@ -36,7 +36,13 @@ Once we got the data into this Intermediate format we started doing EDA and play
 
 ### EDA
 
-In our EDA folder we have two different Jupyter Notebooks where two members of our teams worked on exploring the data and trying to find the best way to model it. Ultimately they decided on K-means.
+In our EDA folder we have 5 different Jupyter Notebooks where three members of our teams worked on exploring the data and trying to find the best way to model it. Ultimately they decided on K-means.
+
+Three of the EDA notebooks go together and are different iterations of exploration:
+
+- skeleton-notebook-run.ipynb: Runs K-means clustering with different combinations of features, which leads to different posssible models. We found the model with the highest Silhouette Score and Calinski-Harabasz Index.
+- skeleton_notebook-run1.ipynb: Runs K-means clustering with only five features and computes the silhouette score and Calinski-Harabasz score
+- Skeleton_notebook-run2.ipynb: Runs K-means clustering with only three features, and computes the silhouette score and Calinski-Harabasz score
 
 ### Model Building
 
