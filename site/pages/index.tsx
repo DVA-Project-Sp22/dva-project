@@ -132,7 +132,7 @@ function Home({
                       <div className="mt-2 text-sm text-yellow-700">
                         <p>
                           In order to generate a playlist, you have to mark at
-                          least one song as disliked.
+                          least two songs as disliked.
                         </p>
                       </div>
                     </div>
